@@ -8,8 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DefaultController extends AbstractController
 {
 
-    public function index($name)
+    public function index()
     {
-        return $this->render("default/index.html.twig", ['name' => $name]);
+        return $this->render("default/index.html.twig");
     }
 }
