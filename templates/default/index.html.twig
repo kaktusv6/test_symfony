@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="alert alert-danger hide" role="alert">
+                <strong>Данные не получены</strong> Возможно сервера ЦБ в данный момент не доступны
+            </div>
+        </div>
+        <div class="row">
+            <section class="preloader">
+                <div class="donut-abs">
+                    <div class="circle"></div>
+                    <div class="spinner"></div>
+                </div>
+                <h3> Загрузка графика </h3>
+            </section>
+        </div>
+        <div class="row">
+            <div id="chart_div"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {#<div class="form-group row">#}
+                    <label for="example-date-input" class="col-2 col-form-label">Date 1</label>
+                    <div class="col-10">
+                        <input class="form-control" type="date" id="date-input-1">
+                    </div>
+                {#</div>#}
+            </div>
+            <div class="col-md-4">
+                {#<div class="form-group row">#}
+                    <label for="example-date-input" class="col-2 col-form-label">Date 2</label>
+                    <div class="col-10">
+                        <input class="form-control" type="date" id="date-input-2">
+                    </div>
+                {#</div>#}
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-success">Получить результат</button>
+        </div>
+    </div>
+{% endblock %}
